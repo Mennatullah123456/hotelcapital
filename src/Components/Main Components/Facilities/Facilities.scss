@@ -1,0 +1,47 @@
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+$transitionDelay: 0.3s;
+
+.facilities {
+  padding: 120px 0;
+  .facilities-section-head {
+    .small-head {
+      color: $text-color;
+    }
+    .main-head {
+      color: $sec-color;
+      font-size: 45px;
+      margin: 5px 0 25px;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+// start media queries
+@include media(MobileToLarge) {
+  .facilities {
+    .facilities-section-head {
+      text-align: center;
+    }
+  }
+}
+@include media(MedToInf) {
+  .facilities {
+    &.reached {
+      .faciliti {
+        top: 0;
+        opacity: 1;
+        transition: $transition + 0.7;
+        @for $i from 1 through 6 {
+          &:nth-child(#{$i}) {
+            transition-delay: $transitionDelay;
+          }
+          $transitionDelay: $transitionDelay + 0.3s;
+        }
+      }
+    }
+  }
+}
+// end media queries

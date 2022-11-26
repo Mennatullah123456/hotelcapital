@@ -1,0 +1,24 @@
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+@use "../../../SASS/Components" as *;
+
+.rooms {
+  padding: 120px 0;
+  background-color: $pale-red;
+  .section-head {
+    .small-head {
+      color: $text-color;
+      font-size: 16px;
+    }
+    .main-head {
+      font-size: 40px;
+      font-weight: normal;
+      color: $sec-color;
+      letter-spacing: 5px;
+      margin: 5px 0 25px;
+    }
+  }
+  .row {
+    gap: 0;
+  }
+}

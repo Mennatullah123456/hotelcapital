@@ -1,0 +1,15 @@
+@use "../../../SASS/Variables" as *;
+
+.stars {
+  .star {
+    font-size: 18px;
+    color: #e4a853;
+    margin-right: 5px;
+  }
+  &.animated {
+    animation: fadeInUp 1s ease-in-out;
+  }
+  &.normal {
+    animation: none;
+  }
+}
